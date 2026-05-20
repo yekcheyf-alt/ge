@@ -27,32 +27,12 @@
 
                             <table class="table">
                                 <thead>
-                                    <tr>
-                                        <th>Name</th>
-                                        <th>Email</th>
-                                    </tr>
                                 </thead>
                                 <tbody>
-                                {{-- @foreach($users as $student) --}}
-                                    <tr>
-                                        <td>John Doe</td>
-                                        <td>Johndoe@sample.com</td>
-                                    </tr>
+                                 {{-- @foreach($student) --}}
                                     <tr>
                                         <td>Matthew Bartolomeo</td>
                                         <td>matthewbartolomeo@sample.com</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Johnella Dondon</td>
-                                        <td>johnelladondon@sample.com</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Precious Maniacop</td>
-                                        <td>preciousmaniacop@sample.com</td>
-                                    </tr>
-
-                                        <td>John Cedric</td>
-                                        <td>johnecedric@sample.com</td>
                                     </tr>
                                 {{-- @endforeach --}}
                                 </tbody>
@@ -60,9 +40,6 @@
                         </div>
                         <!-- /.card-body -->
                     </div>
-                    <button type="button" class="btn btn-success">
-                            Add Student Record
-                    </button>
 
                 </div>
             </div>
