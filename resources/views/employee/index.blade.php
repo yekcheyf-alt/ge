@@ -3,7 +3,7 @@
 @section('content')
     <div class="container">
         <h1>Employees</h1>
-        <a href="{{ route('employees.create') }}" class="btn btn-primary">Add Employee</a>
+        <a href="{{ route('employee.create') }}" class="btn btn-primary">Add Employee</a>
         <table class="table">
             <thead>
                 <tr>
@@ -26,8 +26,8 @@
                         <td>{{ $student->address }}</td>
                         <td>{{ $student->zipcode }}</td>
                         <td>
-                            <a href="{{ route('employees.edit', $student->id) }}" class="btn btn-sm btn-outline-primary">Edit</a>
-                            <form action="{{ route('employees.delete', $student->id) }}" method="POST" style="display: inline;">
+                            <a href="{{ route('employee.edit', $student->id) }}" class="btn btn-sm btn-outline-primary">Edit</a>
+                            <form action="{{ route('employee.delete', $student->id) }}" method="POST" style="display: inline;">
                                 @csrf
                                 @method('DELETE')
                                 <button type="submit" class="btn btn-sm btn-outline-danger" onclick="return confirm('Are you sure?')">Delete</button>

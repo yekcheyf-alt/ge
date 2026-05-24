@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Facades\Auth;
 
 Route::get('/', function () {
     return view('welcome');
@@ -25,8 +26,7 @@ Route::middleware('auth')->group(function () {
     route::get('employees/create', [\App\Http\Controllers\EmployeeController::class, 'create'])->name('employee.create');
     route::post('employees', [\App\Http\Controllers\EmployeeController::class, 'store'])->name('employee.store');
     route::get('employees/{id}/edit', [\App\Http\Controllers\EmployeeController::class, 'edit'])->name('employee.edit');
-    route::put('employees/{id}', [\App\Http\Controllers\EmployeeController::class, 'update'])->name('employee.update');
-    route::delete('employees/{id}', [\App\Http\Controllers\EmployeeController::class, 'destroy'])->name('employee.destroy');
-    
+    route::put('employees/{id}', [\App\Http\Controllers\EmployeeController::class, 'update'])->name('employees.update');
+    route::delete('employees/{id}', [\App\Http\Controllers\EmployeeController::class, 'destroy'])->name('employee.delete');
     
 });
