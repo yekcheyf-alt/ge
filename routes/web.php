@@ -21,4 +21,12 @@ Route::middleware('auth')->group(function () {
 
     Route::get('profile', [\App\Http\Controllers\ProfileController::class, 'show'])->name('profile.show');
     Route::put('profile', [\App\Http\Controllers\ProfileController::class, 'update'])->name('profile.update');
+    Route::get('employees', [\App\Http\Controllers\EmployeeController::class, 'index'])->name('employee.index');
+    route::get('employees/create', [\App\Http\Controllers\EmployeeController::class, 'create'])->name('employee.create');
+    route::post('employees', [\App\Http\Controllers\EmployeeController::class, 'store'])->name('employee.store');
+    route::get('employees/{id}/edit', [\App\Http\Controllers\EmployeeController::class, 'edit'])->name('employee.edit');
+    route::put('employees/{id}', [\App\Http\Controllers\EmployeeController::class, 'update'])->name('employee.update');
+    route::delete('employees/{id}', [\App\Http\Controllers\EmployeeController::class, 'destroy'])->name('employee.destroy');
+    
+    
 });
