@@ -7,7 +7,7 @@ use App\Models\Employee;
 class EmployeeController extends Controller
 {
     public function index () {
-        $employee = Employee::all();
+        $employees = Employee::all();
         return view ('employees.index', compact('employees'));
     
     }
@@ -30,12 +30,12 @@ class EmployeeController extends Controller
     }
 
     public function edit ($id) {
-        $employee = Employee::find($id);
+        $employees = Employee::find($id);
         return view ('employees.edit', compact('employees'));
     }
     public function update (Request $request, $id) {
-        $employee = Employee::find($id);
-        $employee->update([
+        $employees = Employee::find($id);
+        $employees->update([
             'fname' => $request->fname,
             'lname' => $request->lname,
             'mname' => $request->mname,
@@ -47,8 +47,8 @@ class EmployeeController extends Controller
     }
 
     public function destroy ($id) {
-        $employee = Employee::find($id);
-        $employee->delete();
+        $employees = Employee::find($id);
+        $employees->delete();
         return redirect()->route('employees.index');
     }
  
